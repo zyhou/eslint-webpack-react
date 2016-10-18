@@ -12,6 +12,9 @@ module.exports = {
     filename: './app/index.js'
   },
   module: {
+    preLoaders: [
+      { test: /\.js|jsx?$/, loader: 'eslint', exclude: /node_modules/ }
+    ],
     loaders: [
       {
         test: /.js?$/,
@@ -38,6 +41,11 @@ module.exports = {
         loader: "file-loader"
       }
     ]
+  },
+  eslint: {
+    configFile: './.eslintrc',
+    failOnWarning: false,
+    failOnError: true
   },
   devServer: {
     historyApiFallback: true

@@ -1,0 +1,23 @@
+{
+    "plugins": [
+        "react"
+    ],
+    "extends": ["eslint:recommended", "plugin:react/recommended"], // Ajoute quelques règles par défaut
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        "quotes": [
+            2,
+            "single"
+        ] // On modifie cette règle car on préfère les single quotes
+    }
+}
