@@ -13,7 +13,11 @@ module.exports = {
   },
   module: {
     preLoaders: [
-      { test: /\.js|jsx?$/, loader: 'eslint', exclude: /node_modules/ }
+      { 
+        test: /\.js?$/, 
+        loader: 'eslint', 
+        include: path.join(__dirname, 'app'),
+        exclude: /node_modules/ }
     ],
     loaders: [
       {
